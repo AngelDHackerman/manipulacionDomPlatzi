@@ -32,7 +32,19 @@ console.log(`usando .outerHTML.repalce:`,nuevoParrafo);
   
 console.groupEnd();
   
+            // Atributos y propiedades 
+/* 
+  La diferencia entre un atributo y una propiedad, es que los atritubos son utilizados unicamente
+  al inicio del HTML.
+  Las propiedades son como las cosas vivientes y cambiantes que hay dentro del DOM cuando la pagina
+  esta viva en el navegador.
+*/
 
+let nombre = document.querySelector('#nombre');
+
+console.group(`Atributos y propiedades `);
+  console.log(nombre.value = 'angel');
+console.groupEnd();
 
 
 
