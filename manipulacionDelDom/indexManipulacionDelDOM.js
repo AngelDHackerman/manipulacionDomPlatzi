@@ -47,13 +47,19 @@ console.group(`Atributos y propiedades `);
 console.groupEnd();
 
 
+          //ELEMINAR NODOS
+          //padre.removeChild(nodoAEliminar);
 
+let nodoAEliminar = document.querySelector('#pais');
+let padreDelNodoAEliminar = document.querySelector('.formulario');
 
+padreDelNodoAEliminar.removeChild(nodoAEliminar); //aqui eliminamos el campo de PAIS
 
+            //removeChild(nodoAEliminar).parentElement 
 
-
-
-
+let nodoAEliminar2 = document.querySelector('#nombre');
+let padre2 = nodoAEliminar2.parentElement;
+console.log(`Nos devuelve el elemento padre del nodo:`,padre2);
 
 
 
