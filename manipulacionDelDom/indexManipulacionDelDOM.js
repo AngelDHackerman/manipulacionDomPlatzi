@@ -48,6 +48,7 @@ console.groupEnd();
 
 
           //ELEMINAR NODOS
+
           //padre.removeChild(nodoAEliminar);
 
 let nodoAEliminar = document.querySelector('#pais');
@@ -55,11 +56,28 @@ let padreDelNodoAEliminar = document.querySelector('.formulario');
 
 padreDelNodoAEliminar.removeChild(nodoAEliminar); //aqui eliminamos el campo de PAIS
 
-            //removeChild(nodoAEliminar).parentElement 
+            //let referencia = nodoAEliminar.parentElement;
 
 let nodoAEliminar2 = document.querySelector('#nombre');
-let padre2 = nodoAEliminar2.parentElement;
+let padre2 = nodoAEliminar2.parentElement; // esto nos devuelve el ELEMENTO PADRE del nodo a eliminar
 console.log(`Nos devuelve el elemento padre del nodo:`,padre2);
+
+            //usando Remove  (NO funciona en Internet Explorer)
+
+let nodoAEliminar3 = document.querySelector('#genero');
+nodoAEliminar3.remove();
+
+            //usando replaceChild
+
+let nodoARemplazar = document.querySelector('#edad');
+let padreDelNodoARemplazar = nodoARemplazar.parentElement;
+console.log(`Este es el padre del elemento a eliminar usando replaceChild`,padreDelNodoARemplazar);
+
+let nuevoNodo = document.createElement('h3');
+nuevoNodo.textContent = 'Texto insertado usando replaceChild';
+
+padreDelNodoARemplazar.replaceChild(nuevoNodo, nodoARemplazar);
+
 
 
 
