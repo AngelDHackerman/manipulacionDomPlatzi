@@ -80,6 +80,26 @@ padreDelNodoARemplazar.replaceChild(nuevoNodo, nodoARemplazar);
 
 
 
+          //OPERACIONES EN LOTE, aqui modificamos el DOM solo 1 vez y esto lo hace mas eficiente
+
+console.group(`operaciones en lote`);
+const nodos = [];
+
+for (let index = 0; index < 100; index++) {
+  const nodo = document.createElement('input');
+  nodos.push(nodo);
+};
+console.log(`Tarea de 100 nodos creada en memoria`,nodos);
+
+document.body.append(...nodos); //Asi agregamos de golpe TODOS los nodos creados que estan en memoria;
+
+
+
+
+
+console.groupEnd();
+
+
 
 
 
